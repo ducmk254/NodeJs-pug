@@ -15,10 +15,13 @@ app.get('/',(req,res)=>{{
     res.render('home');
 }});
 
-app.get('/learn',(req,res)=>{
+app.get('/learnPug',(req,res)=>{
     res.render('learn');
 });
 
+app.get('/admin',(req,res)=>{
+    res.send('Wellcome to admin page');
+})
 
 //Reload code here
 // const server = require('http').createServer(app);

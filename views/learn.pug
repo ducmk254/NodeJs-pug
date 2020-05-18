@@ -1,3 +1,6 @@
+- var a = 1000
+- var isAdmin = true
+- var arrUsers = [{username:'admin'},{username:'minhduc'},{username:'conga'}]
 doctype html
 head
   title Learn Pug
@@ -5,7 +8,15 @@ head
   meta(name='viewport', content='width=device-width, initial-scale=1')
 body
     h1 Wellcome to Minh Đức blog !!!!
-    h2 kaka
-
+    if (isAdmin)
+        a(href="admin") Admin Page
+    else
+        a(href="/") Quay lại
+    ul(style="list-style:none") Danh sách users:
+        - for(var i = 0; i <=3; i++)
+            li= i
+    ul(style="list-style:none; font-weight:bold;color: red; background-color: #ccc") Danh sách username:
+        each user in arrUsers
+            li= user.username
 
 script(src='/reload/reload.js')
