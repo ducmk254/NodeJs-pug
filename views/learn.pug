@@ -1,6 +1,6 @@
 - var a = 1000
 - var isAdmin = true
-- var arrUsers = [{username:'admin'},{username:'minhduc'},{username:'conga'}]
+
 doctype html
 head
   title Learn Pug
@@ -18,5 +18,12 @@ body
     ul(style="list-style:none; font-weight:bold;color: red; background-color: #ccc") Danh sách username:
         each user in arrUsers
             li= user.username
+
+    h2 Danh sách CBCNV:
+    each cbnv in arrCBNV 
+        span= 'Tên: ' + cbnv.name + ' - '
+        span=  'Tuổi: ' +cbnv.age
+        br
+
 
 script(src='/reload/reload.js')
